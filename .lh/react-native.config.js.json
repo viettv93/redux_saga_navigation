@@ -1,0 +1,18 @@
+{
+    "sourceFile": "react-native.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642346534946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642346534946,
+            "name": "Commit-0",
+            "content": "module.exports = {\r\n    assets: ['./src/assets/fonts'],\r\n };"
+        }
+    ]
+}

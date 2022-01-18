@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/Store.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642301680728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642301680728,
+            "name": "Commit-0",
+            "content": "import {createStore, applyMiddleware, combineReducers} from 'redux'\r\nimport createSagaMiddleware from '@redux-saga/core'\r\nimport Reducer from '../reducer/Reducers'\r\nimport mySaga from '../saga/Saga'\r\n\r\n\r\nconst reducer =combineReducers({reducer: Reducer})\r\nconst sagaMiddleware = createSagaMiddleware()\r\nconst store = createStore(\r\n    reducer,\r\n    applyMiddleware(sagaMiddleware)\r\n)\r\nexport default store\r\n  sagaMiddleware.run(mySaga)"
+        }
+    ]
+}

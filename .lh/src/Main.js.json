@@ -1,0 +1,150 @@
+{
+    "sourceFile": "src/Main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 33,
+            "patches": [
+                {
+                    "date": 1642301982837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642302222095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,24 +17,24 @@\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen2}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Three\"\r\n-                    component={Screen2}\r\n+                    component={Screen3}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Four\"\r\n-                    component={Screen2}\r\n+                    component={Screen4}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Five\"\r\n-                    component={Screen2}\r\n+                    component={Screen5}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Six\"\r\n-                    component={Screen2}\r\n+                    component={Screen6}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Seven\"\r\n-                    component={Screen2}\r\n+                    component={Screen7}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Eight\"\r\n-                    component={Screen2}\r\n+                    component={Screen8}\r\n                     options={{ headerShown: false }} />\r\n             </Stack.Navigator>\r\n         </NavigationContainer>\r\n     );\r\n"
+                },
+                {
+                    "date": 1642302788803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,20 @@\n import { NavigationContainer } from '@react-navigation/native';\r\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n import { Provider } from 'react-redux';\r\n import Store from './store/Store'\r\n+\r\n import Screen1 from \"./screen1/Screen1\";\r\n+import Screen2 from \"./screen1/Screen2\";\r\n+import Screen3 from \"./screen1/Screen3\";\r\n+import Screen4 from \"./screen1/Screen4\";\r\n+import Screen5 from \"./screen1/Screen5\";\r\n+import Screen6 from \"./screen1/Screen6\";\r\n+import Screen7 from \"./screen1/Screen7\";\r\n+import Screen8 from \"./screen1/Screen8\";\r\n \r\n \r\n+\r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n     return (\r\n         <NavigationContainer>\r\n"
+                },
+                {
+                    "date": 1642302829038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,15 @@\n import { Provider } from 'react-redux';\r\n import Store from './store/Store'\r\n \r\n import Screen1 from \"./screen1/Screen1\";\r\n-import Screen2 from \"./screen1/Screen2\";\r\n-import Screen3 from \"./screen1/Screen3\";\r\n-import Screen4 from \"./screen1/Screen4\";\r\n-import Screen5 from \"./screen1/Screen5\";\r\n-import Screen6 from \"./screen1/Screen6\";\r\n-import Screen7 from \"./screen1/Screen7\";\r\n-import Screen8 from \"./screen1/Screen8\";\r\n+import Screen2 from \"./Screen2/Screen2\";\r\n+import Screen3 from \"./Screen3/Screen3\";\r\n+import Screen4 from \"./Screen4/Screen4\";\r\n+import Screen5 from \"./Screen5/Screen5\";\r\n+import Screen6 from \"./Screen6/Screen6\";\r\n+import Screen7 from \"./Screen7/Screen7\";\r\n+import Screen8 from \"./Screen8/Screen8\";\r\n \r\n \r\n \r\n const Stack = createNativeStackNavigator()\r\n"
+                },
+                {
+                    "date": 1642303810936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n     );\r\n }\r\n \r\n export default Screen;\r\n-const Redux = () => (\r\n+const Redux = () => {\r\n     <Provider store={Store}>\r\n         <Screen />\r\n     </Provider>\r\n-)\r\n+}\r\n export default Redux\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642303856211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,12 +47,10 @@\n             </Stack.Navigator>\r\n         </NavigationContainer>\r\n     );\r\n }\r\n-\r\n-export default Screen;\r\n+      export default Screen;\r\n const Redux = () => {\r\n     <Provider store={Store}>\r\n         <Screen />\r\n     </Provider>\r\n }\r\n\\ No newline at end of file\n-export default Redux\n"
+                },
+                {
+                    "date": 1642303892118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,15 @@\n import { Provider } from 'react-redux';\r\n import Store from './store/Store'\r\n \r\n import Screen1 from \"./screen1/Screen1\";\r\n-import Screen2 from \"./Screen2/Screen2\";\r\n-import Screen3 from \"./Screen3/Screen3\";\r\n-import Screen4 from \"./Screen4/Screen4\";\r\n-import Screen5 from \"./Screen5/Screen5\";\r\n-import Screen6 from \"./Screen6/Screen6\";\r\n-import Screen7 from \"./Screen7/Screen7\";\r\n-import Screen8 from \"./Screen8/Screen8\";\r\n+import Screen2 from \"./screen2/Screen2\";\r\n+import Screen3 from \"./screen3/Screen3\";\r\n+import Screen4 from \"./screen4/Screen4\";\r\n+import Screen5 from \"./screen5/Screen5\";\r\n+import Screen6 from \"./screen6/Screen6\";\r\n+import Screen7 from \"./screen7/Screen7\";\r\n+import Screen8 from \"./screen8/Screen8\";\r\n \r\n \r\n \r\n const Stack = createNativeStackNavigator()\r\n@@ -52,5 +52,5 @@\n const Redux = () => {\r\n     <Provider store={Store}>\r\n         <Screen />\r\n     </Provider>\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1642304437679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,5 +52,6 @@\n const Redux = () => {\r\n     <Provider store={Store}>\r\n         <Screen />\r\n     </Provider>\r\n-}\r\n+} \r\n+export default Redux\r\n"
+                },
+                {
+                    "date": 1642304549706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,11 +47,6 @@\n             </Stack.Navigator>\r\n         </NavigationContainer>\r\n     );\r\n }\r\n-      export default Screen;\r\n-const Redux = () => {\r\n-    <Provider store={Store}>\r\n-        <Screen />\r\n-    </Provider>\r\n-} \r\n-export default Redux\r\n+export default Screen;\r\n+\r\n"
+                },
+                {
+                    "date": 1642304606205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n import React from \"react\";\r\n import { NavigationContainer } from '@react-navigation/native';\r\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n-import { Provider } from 'react-redux';\r\n-import Store from './store/Store'\r\n \r\n+\r\n import Screen1 from \"./screen1/Screen1\";\r\n import Screen2 from \"./screen2/Screen2\";\r\n import Screen3 from \"./screen3/Screen3\";\r\n import Screen4 from \"./screen4/Screen4\";\r\n"
+                },
+                {
+                    "date": 1642304935600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import React from \"react\";\r\n import { NavigationContainer } from '@react-navigation/native';\r\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n \r\n+import { Provider } from 'react-redux';\r\n+import Store from './src/store/Store'\r\n \r\n import Screen1 from \"./screen1/Screen1\";\r\n import Screen2 from \"./screen2/Screen2\";\r\n import Screen3 from \"./screen3/Screen3\";\r\n@@ -48,4 +50,10 @@\n     );\r\n }\r\n export default Screen;\r\n \r\n+\r\n+const Redux = () => {\r\n+    <Provider store={Store}>\r\n+        <Screen/>\r\n+    </Provider>\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642304972667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n import React from \"react\";\r\n import { NavigationContainer } from '@react-navigation/native';\r\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n-\r\n import { Provider } from 'react-redux';\r\n import Store from './src/store/Store'\r\n-\r\n import Screen1 from \"./screen1/Screen1\";\r\n import Screen2 from \"./screen2/Screen2\";\r\n import Screen3 from \"./screen3/Screen3\";\r\n import Screen4 from \"./screen4/Screen4\";\r\n"
+                },
+                {
+                    "date": 1642305037849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,10 @@\n }\r\n export default Screen;\r\n \r\n \r\n-const Redux = () => {\r\n+const Main = () => {\r\n     <Provider store={Store}>\r\n         <Screen/>\r\n     </Provider>\r\n\\ No newline at end of file\n-}\n+} \r\n+export default Main\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642305075097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\";\r\n import { NavigationContainer } from '@react-navigation/native';\r\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n import { Provider } from 'react-redux';\r\n-import Store from './src/store/Store'\r\n+import Store from './store/Store'\r\n import Screen1 from \"./screen1/Screen1\";\r\n import Screen2 from \"./screen2/Screen2\";\r\n import Screen3 from \"./screen3/Screen3\";\r\n import Screen4 from \"./screen4/Screen4\";\r\n@@ -12,9 +12,8 @@\n import Screen7 from \"./screen7/Screen7\";\r\n import Screen8 from \"./screen8/Screen8\";\r\n \r\n \r\n-\r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n     return (\r\n         <NavigationContainer>\r\n"
+                },
+                {
+                    "date": 1642305116889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,11 +45,11 @@\n             </Stack.Navigator>\r\n         </NavigationContainer>\r\n     );\r\n }\r\n-export default Screen;\r\n \r\n \r\n+\r\n const Main = () => {\r\n     <Provider store={Store}>\r\n         <Screen/>\r\n     </Provider>\r\n"
+                },
+                {
+                    "date": 1642305166795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,12 @@\n \r\n \r\n \r\n const Main = () => {\r\n-    <Provider store={Store}>\r\n-        <Screen/>\r\n-    </Provider>\r\n-} \r\n+    return (\r\n+        <Provider store={Store}>\r\n+            <Screen />\r\n+        </Provider>\r\n+    )\r\n+\r\n+}\r\n export default Main\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1642305234342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,12 +18,12 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen1}\r\n+                    component={Screen2}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n-                    component={Screen2}\r\n+                    component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Three\"\r\n                     component={Screen3}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642306470319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen2}\r\n+                    component={Screen3}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642307011882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen3}\r\n+                    component={Screen4}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642307115642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen4}\r\n+                    component={Screen5}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642309190548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen5}\r\n+                    component={Screen6}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642321408437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen6}\r\n+                    component={Screen7}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642323235354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen7}\r\n+                    component={Screen8}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642323867066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen8}\r\n+                    component={Screen7}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642324548992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen7}\r\n+                    component={Screen8}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642325138005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen8}\r\n+                    component={Screen2}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642325994703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n import { Provider } from 'react-redux';\r\n import Store from './store/Store'\r\n import Screen1 from \"./screen1/Screen1\";\r\n-import Screen2 from \"./screen2/Screen2\";\r\n+import ScreenView from \"./screen2/ScreenView\";\r\n import Screen3 from \"./screen3/Screen3\";\r\n import Screen4 from \"./screen4/Screen4\";\r\n import Screen5 from \"./screen5/Screen5\";\r\n import Screen6 from \"./screen6/Screen6\";\r\n@@ -18,9 +18,9 @@\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={Screen2}\r\n+                    component={ScreenView}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642330464549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from \"react\";\r\n+import React, { useEffect } from \"react\";\r\n import { NavigationContainer } from '@react-navigation/native';\r\n import { createNativeStackNavigator } from '@react-navigation/native-stack';\r\n import { Provider } from 'react-redux';\r\n import Store from './store/Store'\r\n@@ -14,8 +14,22 @@\n \r\n \r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n+    const initScreen=()=>{\r\n+        return(\r\n+            <NavigatorContainer>\r\n+                <Stack.Navigator>\r\n+                    <Stack.Screen name =\"innitScreen\" component={Screen1}\r\n+                    options={{ headerShown : false}}/>\r\n+                </Stack.Navigator>\r\n+            </NavigatorContainer>\r\n+        )\r\n+    }\r\n+\r\n+    useEffect(()=>{\r\n+        setTimeout(initScreen,3000)\r\n+    })\r\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n"
+                },
+                {
+                    "date": 1642330482009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,14 @@\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n     const initScreen=()=>{\r\n         return(\r\n-            <NavigatorContainer>\r\n+            <NavigationContainer>\r\n                 <Stack.Navigator>\r\n                     <Stack.Screen name =\"innitScreen\" component={Screen1}\r\n                     options={{ headerShown : false}}/>\r\n                 </Stack.Navigator>\r\n-            </NavigatorContainer>\r\n+            </NavigationContainer>\r\n         )\r\n     }\r\n \r\n     useEffect(()=>{\r\n"
+                },
+                {
+                    "date": 1642330576847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,27 +14,15 @@\n \r\n \r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n-    const initScreen=()=>{\r\n-        return(\r\n-            <NavigationContainer>\r\n-                <Stack.Navigator>\r\n-                    <Stack.Screen name =\"innitScreen\" component={Screen1}\r\n-                    options={{ headerShown : false}}/>\r\n-                </Stack.Navigator>\r\n-            </NavigationContainer>\r\n-        )\r\n-    }\r\n-\r\n-    useEffect(()=>{\r\n-        setTimeout(initScreen,3000)\r\n-    })\r\n+   \r\n+    \r\n     return (\r\n         <NavigationContainer>\r\n             <Stack.Navigator>\r\n                 <Stack.Screen name=\"First\"\r\n-                    component={ScreenView}\r\n+                    component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642330595669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n import Screen6 from \"./screen6/Screen6\";\r\n import Screen7 from \"./screen7/Screen7\";\r\n import Screen8 from \"./screen8/Screen8\";\r\n \r\n-\r\n const Stack = createNativeStackNavigator()\r\n function Screen() {\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1642330810804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,16 +22,16 @@\n                 <Stack.Screen name=\"First\"\r\n                     component={Screen1}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Two\"\r\n-                    component={Screen1}\r\n+                    component={ScreenView}\r\n                     options={{ headerShown: false }} />\r\n-                <Stack.Screen name=\"Three\"\r\n+                {/* <Stack.Screen name=\"Three\"\r\n                     component={Screen3}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Four\"\r\n                     component={Screen4}\r\n-                    options={{ headerShown: false }} />\r\n+                    options={{ headerShown: false }} /> */}\r\n                 <Stack.Screen name=\"Five\"\r\n                     component={Screen5}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Six\"\r\n"
+                },
+                {
+                    "date": 1642334453997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <Stack.Screen name=\"Four\"\r\n                     component={Screen4}\r\n                     options={{ headerShown: false }} /> */}\r\n                 <Stack.Screen name=\"Five\"\r\n-                    component={Screen5}\r\n+                    component={Screen7}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Six\"\r\n                     component={Screen6}\r\n                     options={{ headerShown: false }} />\r\n"
+                },
+                {
+                    "date": 1642343972275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n                 <Stack.Screen name=\"Four\"\r\n                     component={Screen4}\r\n                     options={{ headerShown: false }} /> */}\r\n                 <Stack.Screen name=\"Five\"\r\n-                    component={Screen7}\r\n+                    component={Screen5}\r\n                     options={{ headerShown: false }} />\r\n                 <Stack.Screen name=\"Six\"\r\n                     component={Screen6}\r\n                     options={{ headerShown: false }} />\r\n"
+                }
+            ],
+            "date": 1642301982836,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { NavigationContainer } from '@react-navigation/native';\r\nimport { createNativeStackNavigator } from '@react-navigation/native-stack';\r\nimport { Provider } from 'react-redux';\r\nimport Store from './store/Store'\r\nimport Screen1 from \"./screen1/Screen1\";\r\n\r\n\r\nconst Stack = createNativeStackNavigator()\r\nfunction Screen() {\r\n    return (\r\n        <NavigationContainer>\r\n            <Stack.Navigator>\r\n                <Stack.Screen name=\"First\"\r\n                    component={Screen1}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Two\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Three\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Four\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Five\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Six\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Seven\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n                <Stack.Screen name=\"Eight\"\r\n                    component={Screen2}\r\n                    options={{ headerShown: false }} />\r\n            </Stack.Navigator>\r\n        </NavigationContainer>\r\n    );\r\n}\r\n\r\nexport default Screen;\r\nconst Redux = () => (\r\n    <Provider store={Store}>\r\n        <Screen />\r\n    </Provider>\r\n)\r\nexport default Redux"
+        }
+    ]
+}

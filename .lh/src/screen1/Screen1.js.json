@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/screen1/Screen1.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1642300240346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642302126803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import React from \"react\"\r\n import { View, Image } from \"react-native\"\r\n+import { useSelector } from \"react-redux\"\r\n \r\n const Screen1 = () => {\r\n+    const view =useSelector(state=>state.reducer)\r\n     return (\r\n-        <View style={{flex :1, alignItems: 'center', alignContent: 'center'}}>\r\n-\r\n+        <View style={{flex :1, alignItems: 'center', alignContent: 'center', backgroundColor: '#33907C'}}>\r\n+           <Image source={state.commit}/>\r\n         </View>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1642302215464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import React from \"react\"\r\n-import { View, Image } from \"react-native\"\r\n+import { View, Image, Text } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen1 = () => {\r\n     const view =useSelector(state=>state.reducer)\r\n     return (\r\n         <View style={{flex :1, alignItems: 'center', alignContent: 'center', backgroundColor: '#33907C'}}>\r\n            <Image source={state.commit}/>\r\n+           <Text>{state.text1}</Text>\r\n         </View>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1642302880352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n const Screen1 = () => {\r\n     const view =useSelector(state=>state.reducer)\r\n     return (\r\n         <View style={{flex :1, alignItems: 'center', alignContent: 'center', backgroundColor: '#33907C'}}>\r\n-           <Image source={state.commit}/>\r\n-           <Text>{state.text1}</Text>\r\n+           <Image source={view.commit}/>\r\n+           <Text>{view.text1}</Text>\r\n         </View>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1642305198785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Screen1 = () => {\r\n     const view =useSelector(state=>state.reducer)\r\n     return (\r\n-        <View style={{flex :1, alignItems: 'center', alignContent: 'center', backgroundColor: '#33907C'}}>\r\n+        <View style={{flex :1, alignItems: 'center',justifyContent: 'center' , backgroundColor: '#33907C'}}>\r\n            <Image source={view.commit}/>\r\n            <Text>{view.text1}</Text>\r\n         </View>\r\n     )\r\n"
+                },
+                {
+                    "date": 1642330731579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from \"react\"\r\n import { View, Image, Text } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n-const Screen1 = () => {\r\n+const Screen1 = (navigation) => {\r\n     const view =useSelector(state=>state.reducer)\r\n+    setTimeout(navigation.navigate('Two'), 3000)\r\n     return (\r\n         <View style={{flex :1, alignItems: 'center',justifyContent: 'center' , backgroundColor: '#33907C'}}>\r\n            <Image source={view.commit}/>\r\n            <Text>{view.text1}</Text>\r\n"
+                },
+                {
+                    "date": 1642330784288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,13 @@\n import { View, Image, Text } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen1 = (navigation) => {\r\n+    const nextScreen=()=>{\r\n+        navigation.navigate('Two')\r\n+    }\r\n     const view =useSelector(state=>state.reducer)\r\n-    setTimeout(navigation.navigate('Two'), 3000)\r\n+    setTimeout(nextScreen, 3000)\r\n     return (\r\n         <View style={{flex :1, alignItems: 'center',justifyContent: 'center' , backgroundColor: '#33907C'}}>\r\n            <Image source={view.commit}/>\r\n            <Text>{view.text1}</Text>\r\n"
+                },
+                {
+                    "date": 1642331033254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen1 = (navigation) => {\r\n     const nextScreen=()=>{\r\n+        alert(aaa)\r\n         navigation.navigate('Two')\r\n     }\r\n     const view =useSelector(state=>state.reducer)\r\n     setTimeout(nextScreen, 3000)\r\n"
+                },
+                {
+                    "date": 1642331051103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen1 = (navigation) => {\r\n     const nextScreen=()=>{\r\n-        alert(aaa)\r\n+        alert(\"aaa\")\r\n         navigation.navigate('Two')\r\n     }\r\n     const view =useSelector(state=>state.reducer)\r\n     setTimeout(nextScreen, 3000)\r\n"
+                },
+                {
+                    "date": 1642331092345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\"\r\n import { View, Image, Text } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n-const Screen1 = (navigation) => {\r\n+const Screen1 = ({navigation}) => {\r\n     const nextScreen=()=>{\r\n         alert(\"aaa\")\r\n         navigation.navigate('Two')\r\n     }\r\n"
+                },
+                {
+                    "date": 1642331102811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen1 = ({navigation}) => {\r\n     const nextScreen=()=>{\r\n-        alert(\"aaa\")\r\n         navigation.navigate('Two')\r\n     }\r\n     const view =useSelector(state=>state.reducer)\r\n     setTimeout(nextScreen, 3000)\r\n"
+                },
+                {
+                    "date": 1642332346926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import React from \"react\"\r\n import { View, Image, Text } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n-const Screen1 = ({navigation}) => {\r\n-    const nextScreen=()=>{\r\n+const Screen1 = ({ navigation }) => {\r\n+    const nextScreen = () => {\r\n         navigation.navigate('Two')\r\n     }\r\n-    const view =useSelector(state=>state.reducer)\r\n+    const view = useSelector(state => state.reducer)\r\n     setTimeout(nextScreen, 3000)\r\n     return (\r\n-        <View style={{flex :1, alignItems: 'center',justifyContent: 'center' , backgroundColor: '#33907C'}}>\r\n-           <Image source={view.commit}/>\r\n-           <Text>{view.text1}</Text>\r\n+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#33907C' }}>\r\n+            <Image source={view.commit} />\r\n+            <Text>{view.text1}</Text>\r\n         </View>\r\n     )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1642300240346,
+            "name": "Commit-0",
+            "content": "import React from \"react\"\r\nimport { View, Image } from \"react-native\"\r\n\r\nconst Screen1 = () => {\r\n    return (\r\n        <View style={{flex :1, alignItems: 'center', alignContent: 'center'}}>\r\n\r\n        </View>\r\n    )\r\n}\r\n\r\nexport default Screen1"
+        }
+    ]
+}

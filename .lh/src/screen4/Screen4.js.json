@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/screen4/Screen4.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1642303376600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1642306926206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,27 @@\n-import { View } from \"react-native\"\r\n+import React from \"react\" \r\n+import { Image, View } from \"react-native\"\r\n+import { useSelector } from \"react-redux\"\r\n \r\n const Screen4 = () => {\r\n-    return(\r\n-        <View>\r\n-            <View style={{backgroundColor: '#33907C', flex: 1}}></View>\r\n+    const view= useSelector(state=> state.reducer)\r\n+    const view = useSelector(state => state.reducer)\r\n+    return (\r\n+        <View style={{flex: 1}}>\r\n+\r\n+            <View style={{ backgroundColor: '#33907C' , height: '50%'}}></View>\r\n+\r\n+            <View style={{ backgroundColor: 'white', flex: 1,alignItems: 'center', justifyContent: 'center' }}>\r\n+                <View style={{ position: 'absolute', top: - 200, left: 35, backgroundColor: 'white',width: '80%', justifyContent: 'center', alignItems: 'center' }}>\r\n+                    <Image source={view.nen2} />\r\n+                </View>\r\n+                <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text6}</Text>\r\n+                <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text7}</Text>\r\n+                <Image source={view.mid} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n+                <TouchableOpacity style={{ backgroundColor: '#33907C', borderRadius: 20, justifyContent: 'center', alignItems: 'center', width: '85%' }}>\r\n+                    <Text style={{ color: 'white', fontSize: 18, padding: 5 }}>Finish</Text>\r\n+                </TouchableOpacity>\r\n+            </View>\r\n         </View>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1642306938267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen4 = () => {\r\n     const view= useSelector(state=> state.reducer)\r\n-    const view = useSelector(state => state.reducer)\r\n+    \r\n     return (\r\n         <View style={{flex: 1}}>\r\n \r\n             <View style={{ backgroundColor: '#33907C' , height: '50%'}}></View>\r\n"
+                },
+                {
+                    "date": 1642306969226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n                 </View>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text6}</Text>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text7}</Text>\r\n                 <Image source={view.mid} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n+                <View style={{flex: 1}}></View>\r\n                 <TouchableOpacity style={{ backgroundColor: '#33907C', borderRadius: 20, justifyContent: 'center', alignItems: 'center', width: '85%' }}>\r\n                     <Text style={{ color: 'white', fontSize: 18, padding: 5 }}>Finish</Text>\r\n                 </TouchableOpacity>\r\n             </View>\r\n"
+                },
+                {
+                    "date": 1642307001984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n                 </View>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text6}</Text>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text7}</Text>\r\n                 <Image source={view.mid} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n-                <View style={{flex: 1}}></View>\r\n+                \r\n                 <TouchableOpacity style={{ backgroundColor: '#33907C', borderRadius: 20, justifyContent: 'center', alignItems: 'center', width: '85%' }}>\r\n                     <Text style={{ color: 'white', fontSize: 18, padding: 5 }}>Finish</Text>\r\n                 </TouchableOpacity>\r\n             </View>\r\n"
+                },
+                {
+                    "date": 1642307029697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from \"react\" \r\n-import { Image, View } from \"react-native\"\r\n+import { Image, View, Text, TouchableOpacity } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n const Screen4 = () => {\r\n     const view= useSelector(state=> state.reducer)\r\n"
+                },
+                {
+                    "date": 1642307039853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             <View style={{ backgroundColor: '#33907C' , height: '50%'}}></View>\r\n \r\n             <View style={{ backgroundColor: 'white', flex: 1,alignItems: 'center', justifyContent: 'center' }}>\r\n                 <View style={{ position: 'absolute', top: - 200, left: 35, backgroundColor: 'white',width: '80%', justifyContent: 'center', alignItems: 'center' }}>\r\n-                    <Image source={view.nen2} />\r\n+                    <Image source={view.nen3} />\r\n                 </View>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text6}</Text>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text7}</Text>\r\n                 <Image source={view.mid} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n"
+                },
+                {
+                    "date": 1642307074659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                     <Image source={view.nen3} />\r\n                 </View>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text6}</Text>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text7}</Text>\r\n-                <Image source={view.mid} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n+                <Image source={view.end} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n                 \r\n                 <TouchableOpacity style={{ backgroundColor: '#33907C', borderRadius: 20, justifyContent: 'center', alignItems: 'center', width: '85%' }}>\r\n                     <Text style={{ color: 'white', fontSize: 18, padding: 5 }}>Finish</Text>\r\n                 </TouchableOpacity>\r\n"
+                },
+                {
+                    "date": 1642329002928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\" \r\n import { Image, View, Text, TouchableOpacity } from \"react-native\"\r\n import { useSelector } from \"react-redux\"\r\n \r\n-const Screen4 = () => {\r\n+const Screen4 = (props) => {\r\n     const view= useSelector(state=> state.reducer)\r\n     \r\n     return (\r\n         <View style={{flex: 1}}>\r\n@@ -17,9 +17,11 @@\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text6}</Text>\r\n                 <Text style={{ color: '#33907C', fontSize: 20 }}>{view.text7}</Text>\r\n                 <Image source={view.end} resizeMode=\"contain\" style={{marginVertical: 30}}/>\r\n                 \r\n-                <TouchableOpacity style={{ backgroundColor: '#33907C', borderRadius: 20, justifyContent: 'center', alignItems: 'center', width: '85%' }}>\r\n+                <TouchableOpacity \r\n+                onPress={()=>props.onpress()}\r\n+                style={{ backgroundColor: '#33907C', borderRadius: 20, justifyContent: 'center', alignItems: 'center', width: '85%' }}>\r\n                     <Text style={{ color: 'white', fontSize: 18, padding: 5 }}>Finish</Text>\r\n                 </TouchableOpacity>\r\n             </View>\r\n         </View>\r\n"
+                }
+            ],
+            "date": 1642303376600,
+            "name": "Commit-0",
+            "content": "import { View } from \"react-native\"\r\n\r\nconst Screen4 = () => {\r\n    return(\r\n        <View>\r\n            <View style={{backgroundColor: '#33907C', flex: 1}}></View>\r\n        </View>\r\n    )\r\n}\r\n\r\nexport default Screen4"
+        }
+    ]
+}
